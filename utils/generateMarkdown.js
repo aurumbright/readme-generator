@@ -77,12 +77,12 @@ function generateMarkdown(data) {
   const licenseSection = renderLicenseSection(data.license, data.person, data.year);
 
   return `# ${data.name}
-  ${newLicense}
+${newLicense}
 
-  ## Description
-  ${data.description}
+## Description
+${data.description}
 
-  ## Table of Contents
+## Table of Contents
 
   - [Installation](#installation)
   - [Usage](#usage)
@@ -91,27 +91,27 @@ function generateMarkdown(data) {
   - [Tests](#tests)
   - [Questions](#questions)
 
-  ## Installation
-  ${data.installation}
+## Installation
+${data.installation}
 
-  ## Usage
-  ${data.usage}
+## Usage
+${data.usage}
 
-  ## License
-  ${licenseSection}
+## License
+${licenseSection}
 
-  ## Contributing
-  ${data.contributing}
+## Contributing
+${data.contributing}
   
-  ## Tests
-  ${data.tests}
+## Tests
+${data.tests}
 
-  ## Questions
-  ✉️ For questions about the app, you can reach me at my email: ${data.email}
+## Questions
+✉️ For questions about the app, you can reach me at my email: ${data.email}
 
- [Find me on GitHub!](https://github.com/${data.github})
+[Find me on GitHub!](https://github.com/${data.github})
 
-  _This README was generated with ❤️ by [readme-generator](https://github.com/aurumbright/readme-generator)_
+_This README was generated with ❤️ by [readme-generator](https://github.com/aurumbright/readme-generator)_
 
 `;
 }

@@ -78,7 +78,7 @@ function init() {
         .then((answers) => {
             const readMeFile = generateMarkdown(answers);
 
-            fs.writeFile('README.md', readMeFile, (err) =>
+            fs.writeFile('README-generated.md', readMeFile, (err) =>
                 err ? console.log(err) : console.log('Successfully created README!')
             );
         });
