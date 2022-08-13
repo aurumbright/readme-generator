@@ -2,10 +2,10 @@
 [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
 
 ## Description
-This node.js package allows you to generate a professional README from the command line. It uses the inquirer package and allows users to select their license, provide their email and GitHub profiles for contact info, and otherwise create a README markdown file of useful information for future users of their apps.
+This command line application allows you to generate a professional README from the command line. It uses the inquirer package and allows users to select their license, provide their email and GitHub profiles for contact info, and otherwise create a README markdown file of useful information for future users of their apps.
 
 ## Mock-Up
-A video showing this app's functionality can be found [here](https://drive.google.com/file/d/1QH6ltB82r7kvF5BbiI2k284gnYXmRmmj/view?usp=sharing).
+A video showing this app's functionality can be found [here](https://drive.google.com/file/d/1H8qy5Vy5XKNUxEuKerSFoO3ZjLm4YZ3d/view?usp=sharing).
 
 ## Table of Contents
 
