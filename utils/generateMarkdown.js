@@ -109,7 +109,7 @@ function generateMarkdown(data) {
   ## Questions
   ✉️ For questions about the app, you can reach me at my email: ${data.email}
 
-  :octocat: [Find me on GitHub!](https://github.com/${data.github})
+ [Find me on GitHub!](https://github.com/${data.github})
 
   _This README was generated with ❤️ by [readme-generator](https://github.com/aurumbright/readme-generator)_
 
