@@ -1,27 +1,86 @@
-// This script should be the Markdown file structure
-// It's broken down into all the license stuff
-// and then the Markdown file itself
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) { }
+// This function creates the license badge and returns an empty string if there is no license
+function renderLicenseBadge(license) {
+  switch (license) {
+    case 'MIT':
+      return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
+      break;
+    case 'Apache 2.0':
+      return '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)';
+      break;
+    case 'GNU GPLv3':
+      return '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)';
+      break;
+    case 'ISC License':
+      return '[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)';
+      break;
+    case 'Mozilla Public License 2.0':
+      return '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)';
+      break;
+    case 'Boost Software License 1.0':
+      return '[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)';
+      break;
+    case 'The Unilicense':
+      return '[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)';
+      break;
+    default:
+      return '';
+      break;
+  }
+}
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// This function creates the license link and returns an empty badge if there is no license
 function renderLicenseLink(license) {
-
+  switch (license) {
+    case 'MIT':
+      return 'https://choosealicense.com/licenses/mit/';
+      break;
+    case 'Apache 2.0':
+      return 'https://choosealicense.com/licenses/apache-2.0/';
+      break;
+    case 'GNU GPLv3':
+      return 'https://choosealicense.com/licenses/gpl-3.0/';
+      break;
+    case 'ISC License':
+      return 'https://choosealicense.com/licenses/isc/';
+      break;
+    case 'Mozilla Public License 2.0':
+      return 'https://choosealicense.com/licenses/mpl-2.0/';
+      break;
+    case 'Boost Software License 1.0':
+      return 'https://choosealicense.com/licenses/bsl-1.0/';
+      break;
+    case 'The Unilicense':
+      return 'https://choosealicense.com/licenses/unlicense/';
+      break;
+    default:
+      return '';
+      break;
+  }
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {
+// This function creates the license section for the markdown file and returns an empty badge if there is no license
+function renderLicenseSection(license, person, year) {
+  const licenseLink = renderLicenseLink(license);
 
+  if (license) {
+    return `[${license}](${licenseLink})
+
+  Copyright (c) ${year} ${person}`;
+  } else {
+    return ``;
+  }
 }
 
-// TODO: Create a function to generate markdown for README
+// This function generates the markdown file
 function generateMarkdown(data) {
+  const newLicense = renderLicenseBadge(data.license);
+  const licenseSection = renderLicenseSection(data.license, data.person, data.year);
+
   return `# ${data.name}
+  ${newLicense}
+
   ## Description
-    ${data.description}
+  ${data.description}
 
   ## Table of Contents
 
@@ -33,23 +92,24 @@ function generateMarkdown(data) {
   - [Questions](#questions)
 
   ## Installation
-    ${data.installation}
+  ${data.installation}
 
   ## Usage
-    ${data.usage}
+  ${data.usage}
 
   ## License
-
+  ${licenseSection}
 
   ## Contributing
-    ${data.contributing}
+  ${data.contributing}
   
   ## Tests
-    ${data.tests}
+  ${data.tests}
 
   ## Questions
-    ${data.email}
-    ${data.github}
+  For questions about the app, you can reach me at my email: ${data.email}
+
+  [Find me on GitHub!](${data.github})
 
 `;
 }

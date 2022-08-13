@@ -6,6 +6,11 @@ const generateMarkdown = require('./utils/generateMarkdown');
 const questions = [
     {
         type: 'input',
+        name: 'person',
+        message: 'What is your name?',
+    },
+    {
+        type: 'input',
         name: 'name',
         message: 'What is the name of your project?',
     },
@@ -52,6 +57,11 @@ const questions = [
             "Boost Software License 1.0",
             "The Unilicense",
         ]
+    },
+    {
+        type: 'input',
+        name: 'year',
+        message: 'What year should the copyright date be?',
     },
     {
         type: 'input',
