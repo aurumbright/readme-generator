@@ -31,7 +31,7 @@ Contributions are welcome. Please update the README.
 Test the app by running node index.js and following the prompts.
 
 ## Questions
-✉️ For questions about the app, you can reach me at my email: aurum.elean@gmail.com
+✉️ For questions about the app, you can reach me at my email: email@gmail.com
 
 [Find me on GitHub!](https://github.com/aurumbright)
 
